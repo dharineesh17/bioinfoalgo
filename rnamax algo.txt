@@ -1,0 +1,36 @@
+Algorithm 6.1 An RNA maximum base pair matching algorithm
+Input: An RNA sequence R = r1r2 · · · rn.
+Output: Find a secondary structure of RNA with the maximum number of base pairs.
+Step 1: /* Computation of ρ(ri, rj) function for 1 ≦ i < j ≦ n */
+WW = {(A, U), (U, A), (G, C), (C, G), (G, U), (U, G)};
+for i = 1 to n do
+for j = i to n do
+if (ri, rj)
+
+WW then ρ(ri, rj) = 1; else ρ(ri, rj) = 0;
+
+end for
+end for
+Step 2: /* Initialization of Mi,j for j . i ≒ 3 */
+for i = 1 to n do
+for j = i to i + 3 do
+if j ≦ n then Mi,j = 0;
+end for
+end for
+Step 3: /* Calculation of Mi,j for j - i > 3 */
+for h = 4 to n - 1 do
+for i = 1 to n - h do
+j = i + h;
+case1 =Mi,j.1;
+case2 = (1+Mi+1,j.1) × ρ(ri, rj );
+case3 =
+
+max  (1
+
+, 1 1, 1
+
+) ( , ) 
+
+Mi,j = max{case1, case2, case3};
+end for
+end for
