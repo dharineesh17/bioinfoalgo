@@ -1,1 +1,1 @@
-# bioinfoalgo
+# bioinformatics algorithms
